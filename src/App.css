@@ -16,6 +16,33 @@ a:hover{
 	color:#b9b8b8;
 }
 
+
+.Likes {
+	background-color: #f0f0f0;
+	color: #333;
+	border: 2px solid #333;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+
+.Likes:hover {
+	transform: scale(105%);
+	background-color: #333;
+	color: #fff;
+}
+  
+ 
+.Likes.liked {
+	background-color: #ff6b6b; 
+	color: white;
+	border-color: #ff6b6b;
+	cursor: pointer;
+}
+  
+
 li {
 	list-style: none;
 }

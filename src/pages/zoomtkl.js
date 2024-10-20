@@ -2,6 +2,7 @@ import React from "react";
 import Config from "../Config.json";
 import {Helmet} from "react-helmet";
 import {NavLink} from "react-router-dom";
+import Likebutton from "../components/Likebutton";
 
 const TITLE = "Zoom TKL | " + Config.SITE_TITLE;
 
@@ -37,6 +38,9 @@ class Zoomtkl extends React.Component{
                                     <img src="media/icon _star_.png" alt ="star"/>
                                     <img src="media/icon _star_.png" alt ="star"/>
                                     <p>4 reviews</p>
+                                    <Likebutton></Likebutton>
+                                    
+
                                 </li>
                             </ul>
                         </div>
