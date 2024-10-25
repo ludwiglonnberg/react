@@ -619,8 +619,8 @@ input[type="checkbox"] + label {
 	max-width:1400px;
 	width: 100%;
 	display: grid;
-	margin: auto;
 	grid-template-columns: 70% 30%;
+	margin: auto;
 	
 	gap: 15px;
 		
@@ -645,7 +645,7 @@ input[type="checkbox"] + label {
 
 #mainimg {
 	
-	grid-column: 1;	
+	grid-column: 1;
 
 }
 

@@ -1,13 +1,24 @@
 import React from "react";
+
 import Config from "../Config.json";
 import {Helmet} from "react-helmet";
 import {NavLink} from "react-router-dom";
+
 import Likebutton from "../components/Likebutton";
+import Recommendations from "../components/productRecommendations";
+import Options from  "../components/productOptions"
+import ProductImages from "../components/productImages";
 
 const TITLE = "Zoom TKL | " + Config.SITE_TITLE;
 
 class Zoomtkl extends React.Component{
+
+    
     render(){
+        const caseColor = ["Sky Blue", "Wild Green"]
+        const backPlates = ["Black (Stainless steel PVD Mirror)","Silver (Stainless steel PVD Mirror)","Gold (Stainless steel PVD Mirror)"]
+        const defaultPlates = ["Aluminum plates","Polycarbonate(PC) plates"]
+
         return(
         <main>
             <Helmet>
@@ -47,24 +58,7 @@ class Zoomtkl extends React.Component{
                         
                         <h2>$189.00</h2>
 
-                        <div id="options">	
-                            <label>Case color</label>
-                            <select id="Case_color" name="Case color">
-                                <option value="skyblue">Sky blue</option>
-                                <option value="wildgreen">Wild green</option>
-                            </select>
-                            <label>Back plates</label>
-                            <select id="Back_plates" name="Back plates">
-                                <option value="BlackSLS">Black (Stainless steel PVD Mirror)</option>
-                                <option value="SilverSLS">Silver (Stainless steel PVD Mirror)</option>
-                                <option value="GoldSLS">Gold (Stainless steel PVD Mirror)</option>
-                            </select>
-                            <label>Default plates</label>
-                            <select id="Default_plates" name="Default plates">
-                                <option value="alu">Aluminum plates</option>
-                                <option value="PC">Polycarbonate (PC) plates</option>
-                            </select>
-                        </div>
+                        <Options caseColor = {caseColor} backPlates = {backPlates} defaultPlates = {defaultPlates}/>
                         <input type="button" value="Add to cart"/>
                         
                     </div>
@@ -76,27 +70,7 @@ class Zoomtkl extends React.Component{
                         <div className="item"><a href="#/"><img src="media/TKL4.webp" alt ="Skyblue5"/></a></div>
                     </div>
 
-                    <div id="recommendations">
-                        <h2>Others also viewed</h2>
-                        <div className="thumbnail">
-                            <div className="item"><a href="#/"><img src="media/boog.png" alt ="Boog75"/></a>
-                                <p>Boog75 prebuilt</p>
-                                <p>Price - $229.99</p>
-                            </div>
-                            <div className="item"><a href="#/"><img src="media/EssentialPad.png" alt ="ZoomPad"/></a>
-                                <p>ZoomPad Essential Edition</p>
-                                <p>From - $90.00</p>
-                            </div>
-                            <div className="item"><a href="#/"><img src="media/Zoom65.png" alt ="Zoom65"/></a>
-                                <p>Zoom65 Essential Edition</p>
-                                <p>From - $185.00</p>
-                            </div>
-                            <div className="item"><a href="#/"><img src="media/WS.png" alt ="WSSwitch"/></a>
-                                <p>WS Switch Series</p>
-                                <p>Price - $13.65</p>
-                            </div>
-                        </div>
-                    </div>
+                   <Recommendations></Recommendations>
                     
                 </div>
 
